@@ -1,0 +1,130 @@
+@import '../../../../assets/scss/colors.scss';
+
+.transaction {
+     .transaction-layout {
+          .brand-name {
+               display: flex;
+
+               img {
+                    height: 30px;
+                    width: 30px;
+               }
+               span {
+                    p {
+                         padding-left: 10px;
+                         font-size: 16px;
+                         font-weight: 600;
+                         color: $blue-color;
+                    }
+               }
+          }
+          .heading-section {
+               margin-top: 20px;
+               .transaction-headline {
+                    text-align: left;
+                    align-items: center;
+
+                    h2 {
+                         font-size: 28px;
+                         color: #838996;
+                    }
+               }
+
+               .icon-layout {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    .search-icon,
+                    .chart-icon,
+                    .filter-icon {
+                         display: flex;
+                         align-items: center;
+                         margin-right: 15px;
+                    }
+               }
+          }
+          .Bar-chart {
+               margin-top: 5px;
+
+               .demo-chart {
+                    height: 550px;
+               }
+          }
+
+          .Balance-data,
+          .contact-data,
+          .help-points {
+               margin-top: 15px;
+               display: flex;
+               flex-direction: column;
+               background-color: rgb(246, 246, 246);
+               border-radius: 5px;
+
+               p {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 0;
+                    padding: 5px 10px;
+                    font-weight: 500;
+
+                    span {
+                         text-align: right;
+                         margin-right: 5px;
+                    }
+               }
+               p.my-balance {
+                    padding: 15px 10px;
+
+                    span {
+                         font-size: 25px;
+                         font-weight: 500;
+                         color: $gold-color;
+                    }
+               }
+          }
+          .contract-data {
+               margin-top: 15px;
+               .contact-headline {
+                    h3 {
+                         font-size: 18px;
+                         font-weight: 500;
+                    }
+               }
+          }
+
+          .help-desk {
+               .help-headline {
+                    h3 {
+                         display: flex;
+                         justify-content: space-between;
+                         align-items: center;
+                         margin: 0;
+                         font-weight: 500;
+                    }
+               }
+               .help-points {
+                    padding: 5px 10px;
+                    height: 180px;
+
+                    ul {
+                         li {
+                              padding-top: 10px;
+                         }
+                    }
+               }
+          }
+          .transaction-data {
+               tbody {
+                    tr {
+                         td {
+                              span {
+                                   color: $red-color;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}

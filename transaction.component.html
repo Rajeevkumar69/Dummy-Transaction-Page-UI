@@ -1,0 +1,103 @@
+<div class="transaction">
+     <div class="transaction-layout">
+          <div class="container-fluid">
+               <div class="row">
+                    <div class="col-12 col-md-12">
+                         <div class="brand-name">
+                              <img src="../../../../assets/images/others/pngwing.com.png" alt="tr" />
+                              <span><p>Payvala</p></span>
+                         </div>
+                    </div>
+               </div>
+               <div class="heading-section">
+                    <div class="row">
+                         <div class="col-12 col-md-4">
+                              <div class="transaction-headline">
+                                   <h2>Transaction</h2>
+                              </div>
+                         </div>
+                         <div class="col-12 col-md-8 icon-layout">
+                              <div class="search-icon"><span class="material-symbols-outlined"> search </span><span>Search</span></div>
+                              <div class="chart-icon"><span class="material-symbols-outlined"> finance </span><span>Chart</span></div>
+                              <div class="filter-icon"><span class="material-symbols-outlined"> filter_alt </span><span>Filter</span></div>
+                              <div class="req-btn">
+                                   <button class="mat-button" color="accent" mat-stroked-button>Request</button>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col-12 col-md-8 Bar-chart">
+                         <!-- <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"> </canvas> -->
+                         <div echarts [options]="dataChartOptions" [merge]="mergeOptions" class="demo-chart"></div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                         <div class="Balance-data">
+                              <p class="my-balance">My Balance <span>&#8364;1152.25</span></p>
+                              <hr />
+                              <p>Today <span>&#8364;32</span></p>
+                              <p>On Review <span>&#8364;116.56</span></p>
+                              <p>
+                                   Payment documants <span><i class="fa-solid fa-angle-right"></i></span>
+                              </p>
+                         </div>
+                         <div class="contract-data">
+                              <div class="contact-headline">
+                                   <h3>CONTRACTS</h3>
+                              </div>
+                              <hr />
+                              <div class="contact-data">
+                                   <p>illustrator <span>&#8364;12.01</span></p>
+                                   <p>Graphic Designer <span>&#8364;56.21</span></p>
+                              </div>
+                         </div>
+                         <div class="help-desk">
+                              <div class="help-headline">
+                                   <h3>
+                                        Help <span><i class="fa-solid fa-xmark"></i></span>
+                                   </h3>
+                                   <hr />
+                              </div>
+                              <div class="help-points">
+                                   <ul>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col-12 col-md-8 transaction-data">
+                         <ng-container *ngIf="transactionData">
+                              <table class="table table-borderless">
+                                   <thead>
+                                        <tr>
+                                             <th>Date</th>
+                                             <th>Task</th>
+                                             <th>Title</th>
+                                             <th>Amount</th>
+                                        </tr>
+                                   </thead>
+                                   <ng-container *ngFor="let data of transactionData">
+                                        <tbody>
+                                             <tr>
+                                                  <td>{{ data.date }}</td>
+                                                  <td>{{ data.task }}</td>
+                                                  <td>
+                                                       <span> {{ data.status }} </span> {{ data.title }}
+                                                  </td>
+                                                  <td>{{ data.amount }}</td>
+                                             </tr>
+                                        </tbody>
+                                   </ng-container>
+                              </table>
+                         </ng-container>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
